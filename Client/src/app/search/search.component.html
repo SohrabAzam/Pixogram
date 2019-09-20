@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="container-fluid dashboard-container">
+    <div class="row ml-3 ">
+        <div class="col-lg-2 flex-link">
+            <h2 class="text-center">Account</h2>
+            <br>
+            <br>
+            <a [routerLink]="'/newsfeed'" class="btn-outline-light btn btn-link">Newsfeed</a><br />
+            <a [routerLink]="'/blocked'" class="btn-outline-light btn btn-link">Blocked Accounts</a><br />
+            <a [routerLink]="'/update'" class="btn-outline-light btn btn-link">Account Update</a><br />
+            <a [routerLink]="'./search'" class="btn-outline-light btn btn-link">Search</a><br />
+            <a href="#" class="btn-outline-light btn btn-link">Logout</a><br />
+
+        </div>
+        <div class="col-lg-10">
+            <div class="row form-group">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <h2 class="text-center">Search</h2>
+                    <form action="" class="form-inline" (submit)="search()">
+                        <input type="search" name="search" id="search" class="form-control search-bar text-center" placeholder="Enter What You Want To Explore" [(ngModel)]="searchText">
+                        <button type="submit" class="btn btn-outline-light btn-sm ml-2 my-2">Search</button>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col lg-4"></div>
+                <div class="col-lg-6">
+                    <div *ngFor="let user of users">
+                        <div *ngIf="checkUser(user)">
+                            <a [routerLink]="['/profile',user.userId]"><label *ngIf="compare(user)"> {{ user.username }}</label></a> &nbsp;
+                            <button class="btn btn-outline-light btn-sm" (click)="follow(user)" *ngIf="compare(user)">Follow</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+</div>

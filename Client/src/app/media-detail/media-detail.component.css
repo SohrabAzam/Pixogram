@@ -1,0 +1,9 @@
+.media-img {
+    height: 90%;
+    width: 90%;
+}
+
+input[type="text"] {
+    background: transparent;
+    color: #fff;
+}

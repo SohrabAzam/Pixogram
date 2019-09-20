@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-lg-5">
+            <img src="assets/images/back1.jpg" alt="Media image" class="media-img">
+            <br>
+            <p class="text-center "><i class="fa fa-heart "></i> {{ media.likes }} &nbsp; &nbsp;<i class="fa fa-heart fa-rotate-180"></i> {{ media.unlikes }} &nbsp; &nbsp;<i class="fa fa-comments" aria-hidden="true"></i> {{ media.numberOfComments }}</p>
+        </div>
+        <div class="col-lg-7">
+            <h5>Title : {{ media.title }}</h5>
+            <h5>Description : {{ media.description }}</h5>
+            <h5>Upload Date and Time : {{media.uploadDate}} {{media.uploadTime}}</h5>
+            <h5>Uploaded By : {{ media.userName }}</h5>
+            <button class="btn btn-outline-light" (click)="like('Y')"><i class="fa fa-heart " ></i> Like</button> &nbsp;
+            <button class="btn btn-outline-light" (click)="like('N')"><i class="fa fa-heart fa-rotate-180" ></i>Dislike</button>
+            <br> <small class="text-success">{{ likeMessage }}</small>
+            <h2>Comments :</h2>
+            <div *ngFor="let comment of comments">
+                <h5>{{comment.commentorName}} :</h5>
+                <p> {{comment.comment}}</p>
+            </div>
+            <div>
+                <input type="text" name="comment" id="comment" [(ngModel)]="newComment.comment" class="form-control">
+                <button class="btn btn-outline-light" (click)="postComment()">Post Comment</button>
+                <br>
+                <small class="text-success">{{ message }}</small>
+            </div>
+        </div>
+    </div>
+</div>

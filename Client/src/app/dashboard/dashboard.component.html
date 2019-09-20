@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="container-fluid dashboard-container">
+    <div class="row ml-3 ">
+        <div class="col-lg-2 flex-link">
+            <h2 class="text-center">Account</h2>
+            <br>
+            <br>
+            <a [routerLink]="'/newsfeed'" class="btn-outline-light btn btn-link">Newsfeed</a><br />
+            <a [routerLink]="'/blocked'" class="btn-outline-light btn btn-link">Blocked Accounts</a><br />
+            <a [routerLink]="'/update'" class="btn-outline-light btn btn-link">Account Update</a><br />
+            <a [routerLink]="'/search'" class="btn-outline-light btn btn-link">Search</a><br />
+            <a href="#" class="btn-outline-light btn btn-link">Logout</a><br />
+
+        </div>
+        <div class="col-lg-10">
+            <br>
+            <h2>Something About You </h2>
+            <br>
+            <h4>Description : </h4>
+            <p>{{ user.about }}</p>
+            <br>
+            <h2>Your Pictures </h2>
+            <div class="card-deck ">
+                <div class="card " *ngFor="let media of medias">
+                    <br />
+                    <a [routerLink]="['/mediaDetail',media.mediaId]"><img class="card-img-top img mx-auto d-block " src="assets/scalableVectorGraphics/logo.svg " alt="Card image cap " /></a>
+                    <div class="card-body ">
+                        <p class="text-center ">Title : {{ media.title }}</p>
+                        <p class="text-center "><i class="fa fa-heart "></i> {{ media.likes }} <i class="fa fa-heart fa-rotate-180"></i> {{ media.unlikes }} <i class="fa fa-comments" aria-hidden="true"></i> {{ media.numberOfComments }}</p>
+                        <div class="row ">
+                            <div class="col text-center ">
+                                <p class="text-center ">{{ media.type }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

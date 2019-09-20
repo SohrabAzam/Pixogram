@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="container-fluid dashboard-container">
+    <div class="row ml-3 ">
+        <div class="col-lg-2 flex-link">
+            <h2 class="text-center">Account</h2>
+            <br>
+            <br>
+            <a [routerLink]="'/newsfeed'" class="btn-outline-light btn btn-link">Newsfeed</a><br />
+            <a [routerLink]="'/blocked'" class="btn-outline-light btn btn-link">Blocked Accounts</a><br />
+            <a [routerLink]="'/update'" class="btn-outline-light btn btn-link">Account Update</a><br />
+            <a [routerLink]="'/search'" class="btn-outline-light btn btn-link">Search</a><br />
+            <a href="#" class="btn-outline-light btn btn-link">Logout</a><br />
+
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-lg-9">
+                    <br>
+                    <h2 class="text-center">Blocked Accounts</h2>
+                    <br>
+                   
+                   
+                    <br>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <h2>Account List </h2>
+            <div class="card-deck ">
+                <div class="card " *ngFor="let blockedUser of blockedUsers">
+                    <br />
+                    <img class="card-img-top profile-picture mx-auto d-block "
+                        src="assets/scalableVectorGraphics/user.svg " alt="Card image cap " />
+                    <hr />
+                    <div class="card-body ">
+                        <p class="text-center ">{{ blockedUser.blockedUser }}</p>
+                        <hr />
+                        <div class="row ">
+                            <div class="col text-center">
+                                <button (click)="unblock(blockedUser)" class="btn btn-outline-light ">Unblock</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

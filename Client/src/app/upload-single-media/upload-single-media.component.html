@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="container-fluid account-update-container">
+    <div class="row ml-3 ">
+        <div class="col-lg-2 input-flex">
+
+            <h2 class="text-center">Media</h2>
+            <br>
+            <br>
+            <a [routerLink]="'/upload'" class="btn-outline-light btn btn-link active">Single Media</a><br />
+            <a [routerLink]="'/uploadmulti'" class="btn-outline-light btn btn-link">Multiple Media</a><br />
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2 class="text-center">Upload a Single Media File</h2><br>
+                    <div class="row">
+                        <form action="" class="single-media">
+                            <div class="col-lg-9">
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        <label for="">Browse</label>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <!-- <input type="file" name="file" id="file"
+                                            accept="image/jpeg,image/png,image/gif,video/wmv,video/avi,video/mp4"> -->
+                                        <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button type="submit" class="btn btn-outline-light" (click)="upload()">Upload</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        <label for="title">Title</label>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <input #title="ngModel" type="text" name="title" id="title" class="form-control" placeholder="Enter title here" [(ngModel)]="media.title" required [class.is-invalid]="title.invalid && title.touched">
+                                        <small class="text-danger text-center" *ngIf="title.invalid && title.touched">Required Field</small>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        <label for="desc">Description</label>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <textarea name="desc" id="desc" cols="33" rows="3" class="form-control" placeholder="Enter description here" [(ngModel)]="media.description"></textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        <label for="tags">Tags</label>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <textarea name="desc" id="desc" cols="33" rows="3" class="form-control" placeholder="Enter tags here"></textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        <label for="">Effects</label>
+                                    </div>
+                                    <div class="col-lg-9">
+
+                                        <button class="btn btn-dark btn-sm" (click)="sepia()">Sepia</button>
+                                        <button class="btn btn-dark btn-sm" (click)="grey()">Grey</button>
+                                        <button class="btn btn-dark btn-sm" (click)="brighten()">Brighten</button>
+                                        <button class="btn btn-dark btn-sm" (click)="contrast()">Contrast</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="text-success text-center" *ngIf="success">{{ successMessage }}</p>
+                    <p class="text-danger text-center" *ngIf="!success">{{ failureMessage }}</p>
+                </div>
+                <div class="col-lg-3">
+                    <img [src]="imgURL" height="200" *ngIf="imgURL">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

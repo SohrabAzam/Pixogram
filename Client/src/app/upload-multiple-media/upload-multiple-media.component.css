@@ -1,0 +1,46 @@
+.multiple-media {
+    margin: 0 auto;
+}
+
+.multiple-media textarea {
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.multiple-media input[type="text"] {
+    background: transparent !important;
+    color: #fff !important;
+    width: 100%;
+}
+
+.btn-sm {
+    height: 40px;
+    margin-top: 5px;
+}
+
+a {
+    color: #fff;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.input-flex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-link {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    top: -33px;
+}
+
+.main-row {
+    margin-right: 8rem;
+}

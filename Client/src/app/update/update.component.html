@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="container-fluid dashboard-container">
+    <div class="row ml-3 ">
+        <div class="col-lg-2 flex-link">
+            <h2 class="text-center">Account</h2>
+            <br>
+            <br>
+            <a [routerLink]="'/newsfeed'" class="btn-outline-light btn btn-link">Newsfeed</a><br />
+            <a [routerLink]="'/blocked'" class="btn-outline-light btn btn-link">Blocked Accounts</a><br />
+            <a [routerLink]="'/update'" class="btn-outline-light btn btn-link">Account Update</a><br />
+            <a [routerLink]="'/search'" class="btn-outline-light btn btn-link">Search</a><br />
+            <a [routerLink]="'/logout'" class="btn-outline-light btn btn-link">Logout</a><br />
+
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <form>
+                        <h2 class="text-center">Update Account</h2>
+                        <div class="input-flex">
+                            <div class="inline-flex">
+                                <input type="text" class="form-control my-2 mr-2 register-username" name="username" id="username" placeholder="Username" required [(ngModel)]=user.username>
+                                <button class="btn btn-sm btn-outline-info" (click)="check()">Check</button>
+                            </div>
+                            <small [class.text-danger]="!available" [class.text-success]="available">{{ checkMessage }}</small>
+                            <input type="text" name="firstname" id="firstname" class="form-control my-2" placeholder="First Name" [(ngModel)]=user.firstName>
+                            <input type="text" name="lastname" id="lastname" class="form-control my-2" placeholder="Last Name" [(ngModel)]=user.lastName>
+                            <textarea class="form-control my-2" name="about" id="about" cols="10" rows="3" placeholder="About yourself" [(ngModel)]=user.about></textarea>
+                            <input type="email" class="form-control my-2" name="email" id="email" placeholder="Email" [(ngModel)]=user.email>
+                            <input type="password" class="form-control my-2" name="new-password" id="new-password" placeholder="New Password" required [(ngModel)]=user.password>
+                            <div class="text-center"><button class="btn btn-outline-light my-2" (click)="update()">Update Details</button>
+                            </div>
+                            <small [class.text-danger]="!success" [class.text-success]="success">{{ message }}</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</div>

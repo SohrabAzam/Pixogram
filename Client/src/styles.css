@@ -1,0 +1,69 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+
+.bghomeimg {
+    background-image: url(/assets/images/back9.jpg);
+    width: 96vw;
+    height: 100vh;
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+.row {
+    height: inherit;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 300px;
+}
+
+.flex {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.input-flex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    height: inherit;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.card {
+    background: transparent;
+}
+
+.dashboard-container .flex-link {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /* top: -33px; */
+}
+
+a {
+    color: #fff;
+}
+
+.btn-link {
+    width: 200px;
+    border: 1px solid #fff !important;
+    color: #fff;
+    text-align: center;
+}

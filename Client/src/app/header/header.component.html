@@ -1,0 +1,4 @@
+<div class="jumbotron text-center" *ngIf="authService.isUserLoggedIn()">
+    <h1>Welcome to PixoGram, {{ user.username }}</h1>
+    <img src="assets/scalableVectorGraphics/user.svg" alt="" class="profile-picture">
+</div>

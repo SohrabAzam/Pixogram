@@ -1,0 +1,12 @@
+.navbar {
+    background: transparent !important;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.account-nav {
+    margin-right: 72px;
+}

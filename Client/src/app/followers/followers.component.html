@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="details text-center">
+    <h1 class="text-center">Followers and Following</h1>
+    <label class="checkbox-inline"><input type="checkbox" name="followers-check" value="followers"  checked>Followers</label> &nbsp;
+    <label class="checkbox-inline"><input type="checkbox" name="following-check" value="following"  checked>Following</label>
+</div>
+<div class="card-deck ">
+    <div class="card " *ngFor="let follower of followers">
+        <br />
+        <img class="card-img-top profile-picture mx-auto d-block " src="assets/scalableVectorGraphics/user.svg " alt="Card image cap " />
+        <hr />
+        <div class="card-body ">
+            <p class="text-center ">{{ follower.followerName }}</p>
+            <hr />
+            <div class="row ">
+                <div class="col text-center">
+                    <span><button class="btn btn-outline-light " *ngIf="isFollowing(follower)" (click)="unfollow(follower)">Unfollow</button></span>
+                    <span><button class="btn btn-outline-light " *ngIf="!isFollowing(follower)" (click)="follow(follower)">Follow</button></span>
+                    <br><br>
+                    <p *ngIf="isFollower(follower)">{{ follower.followerName }} follows you</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

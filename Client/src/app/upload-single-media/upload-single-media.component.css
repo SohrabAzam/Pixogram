@@ -1,0 +1,24 @@
+.single-media {
+    margin: 0 auto;
+}
+
+.single-media textarea {
+    width: auto !important;
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.single-media input[type="text"] {
+    background: transparent !important;
+    color: #fff !important;
+}
+
+
+.btn-sm {
+    height: 40px;
+    margin-top: 5px;
+}
+
+a {
+    color: #fff;
+}

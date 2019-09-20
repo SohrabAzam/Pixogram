@@ -1,0 +1,145 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="container-fluid account-update-container">
+    <div class="row ml-3 ">
+        <div class="col-lg-2 flex-link">
+
+            <h2>Media</h2>
+            <br>
+            <br>
+            <a [routerLink]="'/upload'" class="btn-outline-light btn btn-link">Single Media</a><br />
+            <a [routerLink]="'/uploadmulti'" class="btn-outline-light btn btn-link active">Multiple Media</a><br />
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2 class="text-center">Upload Multiple Media Files</h2><br><br>
+                </div>
+            </div>
+            <div class="row main-row">
+                <!-- <div class="wrapper"> -->
+                <form action="" class="multiple-media">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="">Browse</label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="file" name="file" id="file" accept="image/jpeg,image/png,image/gif,video/wmv,video/avi,video/mp4">
+                                </div>
+                                <div class="col-lg-2">
+                                    <button type="submit" class="btn btn-outline-light">Upload All
+                                            Media</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="title ">Title</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" name="title" id="title" class="form-control" placeholder="Enter title here">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="desc">Description</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <textarea name="desc" id="desc" cols="33" rows="3" class="form-control" placeholder="Enter description here"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="tags">Tags</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <textarea name="desc" id="desc" cols="33" rows="3" class="form-control" placeholder="Enter tags here"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="">Effects</label>
+                                </div>
+                                <div class="col-lg-9">
+
+                                    <button class="btn btn-dark btn-sm">Sepia</button>
+                                    <button class="btn btn-dark btn-sm">Grey</button>
+                                    <button class="btn btn-dark btn-sm">Brighten</button>
+                                    <button class="btn btn-dark btn-sm">Contrast</button>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br><br>
+                    <div class="row">
+
+
+                        <div class="col-lg-9">
+
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="title">Title</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="text" name="title" id="title" class="form-control" placeholder="Enter title here">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="desc">Description</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <textarea name="desc" id="desc" cols="33" rows="3" class="form-control" placeholder="Enter description here"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="tags">Tags</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <textarea name="desc" id="desc" cols="33" rows="3" class="form-control" placeholder="Enter tags here"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <label for="">Effects</label>
+                                </div>
+                                <div class="col-lg-9">
+
+                                    <button class="btn btn-dark btn-sm">Sepia</button>
+                                    <button class="btn btn-dark btn-sm">Grey</button>
+                                    <button class="btn btn-dark btn-sm">Brighten</button>
+                                    <button class="btn btn-dark btn-sm">Contrast</button>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- </div> -->
+            </div>
+            <div class="col-lg-3">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.input-flex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.register-username {
+    margin-left: 4rem;
+}
+
+a {
+    color: #fff;
+}
+
+textarea {
+    width: 300px;
+}

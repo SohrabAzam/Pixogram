@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" *ngIf="authService.isUserLoggedIn()">
+    <a class="navbar-brand" [routerLink]="'/dashboard'"><img src="assets/scalableVectorGraphics/logo.svg" class="logo" alt=""> PixoGram</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="'/dashboard'">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/upload'">Upload Media</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/media'">My Media</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/followers'">Followers/Following</a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav account-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" [routerLink]="'/dashboard'">Dashboard</a>
+                    <a class="dropdown-item" [routerLink]="'/newsfeed'">Newsfeed</a>
+                    <a class="dropdown-item" [routerLink]="'/blocked'">Blocked Accounts</a>
+                    <a class="dropdown-item" [routerLink]="'/update'">Account Update</a>
+                    <a class="dropdown-item" [routerLink]="'/search'">Search</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" [routerLink]="'/logout'">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
